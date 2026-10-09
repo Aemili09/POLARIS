@@ -5,7 +5,7 @@ Polarimetric stress imaging laboratory, built from the supplied **POLARIS-X — 
 ## Download the simulation
 
 - [Complete project with generated results (29 MB)](https://github.com/Aemili09/POLARIS/raw/refs/heads/polaris-x-download/downloads/POLARIS-X_Download.zip)
-- [Application and original notebook only (49 KB)](https://github.com/Aemili09/POLARIS/raw/refs/heads/polaris-x-download/downloads/POLARIS-X_Source.zip)
+- [Application and original notebook only (57 KB)](https://github.com/Aemili09/POLARIS/raw/refs/heads/polaris-x-download/downloads/POLARIS-X_Source.zip)
 
 Extract either ZIP and open `POLARIS-X/START_HERE.md` for Windows, macOS, Linux and Google Colab instructions. The smaller ZIP excludes pre-generated results; you can generate them by running the application. Checksums are in `downloads/SHA256SUMS`.
 
@@ -89,6 +89,8 @@ The application implements software workflows for the notebook's proposed next s
 - **Inverse:** known orientation, coefficient, thickness, wavelengths and analyzer angle are required. Only principal stress difference is reconstructed; individual stress components are not identifiable from these images alone. Dark axes, weak sensitivity, fringe ambiguity and search bounds can prevent recovery. Use the validity mask. See [scientific methods and data formats](docs/METHODS.md).
 
 The default synthetic inverse validation uses independent 600 N and 1400 N FEA fields. It supplies their exact orientation as a prior and adds seeded Gaussian intensity noise. It evaluates numerical inversion under the model assumptions, not physical accuracy. Report valid-pixel coverage alongside RMSE; approximate intervals exclude calibration, mesh and model uncertainty.
+
+The [detailed figure audit](docs/FIGURE_AUDIT.md) records corrected interpolation/display defects and remaining scientific limitations. Image 4 resolves about 34% of material pixels in its synthetic example, and some accepted fits select the wrong fringe branch; acceptance is not proof of correctness. Use the updated figures and report their uncertainty and incomplete coverage.
 
 ## Tests and notebook
 

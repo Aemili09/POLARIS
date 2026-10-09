@@ -17,6 +17,8 @@ Figures are numbered in the order supplied for this presentation. Each number re
 
 **Scope:** Synthetic, numerically checked results using illustrative material parameters. Experimental calibration and validation are still required.
 
+**Audit:** Use the updated figures supplied with this document. Numerical boundary masking, pixel alignment, and reconstruction color clipping were corrected. See `docs/FIGURE_AUDIT.md` in the repository for the evidence and remaining limitations. Images 1–3 use 1000 N; Image 4 is a separate 1400 N synthetic case.
+
 ## Image 1 — Effect of analyzer rotation on the optical image
 
 **File:** `Image_1_Analyzer_Rotation.png`
@@ -79,7 +81,7 @@ Figures are numbered in the order supplied for this presentation. Each number re
 
 **What to say:** “The method reconstructs stress differences only where the optical measurements provide enough information. It explicitly leaves unresolved regions blank and estimates uncertainty for the retained values.”
 
-**Interpretation note:** The reconstruction uses known principal-axis orientation, thickness and optical coefficient. Intervals are conditional local approximations and exclude calibration and model uncertainty. This figure does not demonstrate complete stress-tensor recovery or experimental accuracy.
+**Interpretation note:** The reconstruction uses known principal-axis orientation, thickness and optical coefficient. Intervals are conditional local approximations and exclude calibration and model uncertainty. In this displayed 1400 N example, 1395/4072 material pixels (34.26%) are accepted; RMSE is 1.42 MPa, and six accepted pixels have errors above 5 MPa, with a maximum error of 19.31 MPa. Acceptance does not guarantee a correct fringe branch. This figure does not demonstrate complete stress-tensor recovery or experimental accuracy.
 
 ## Presentation sequence
 

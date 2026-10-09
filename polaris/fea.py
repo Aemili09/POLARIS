@@ -37,6 +37,14 @@ def annular_mesh(geometry, radial=20, angular=96):
     radii = geometry.hole_radius_mm + fraction[:, None]*(outer-geometry.hole_radius_mm)
     nodes = np.stack((radii*c, radii*s), axis=-1).reshape(-1, 2)
     n = len(angles)
+    # Trigonometric construction can put an outer node ~1e-14 mm inside
+    # the intended rectangle, causing exact boundary samples to be masked by
+    # the triangle locator. Make the known rectangular edges exact.
+    outer_nodes = nodes[-n:]
+    for axis, half in ((0, geometry.length_mm/2), (1, geometry.width_mm/2)):
+        for edge in (-half, half):
+            on_edge = np.isclose(outer_nodes[:, axis], edge, atol=1e-10, rtol=0)
+            outer_nodes[on_edge, axis] = edge
     triangles = []
     for j in range(radial):
         for k in range(n):

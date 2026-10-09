@@ -1,6 +1,7 @@
 """Generate all demonstrations, including synthetic calibration examples."""
 from pathlib import Path
 import os
+import json
 import numpy as np
 import pandas as pd
 
@@ -34,7 +35,19 @@ field = solve_plate(1400, radial=12, angular=64, nx=101, ny=41).field
 measured = optical_images(field)["rgb_linear"]+np.random.default_rng(17).normal(0, .001, (*field.outside.shape, 3))
 result = reconstruct(measured, field.phi_rad, noise_std=.001)
 result.valid &= field.outside
-np.savez_compressed(output/"reconstruction.npz", **vars(result), reference_delta_sigma_mpa=field.delta_sigma_mpa)
+errors = result.delta_sigma_mpa[result.valid]-field.delta_sigma_mpa[result.valid]
+metrics = {"force_n": 1400, "noise_std_linear": .001, "seed": 17,
+           "known_orientation": True, "nx": 101, "ny": 41,
+           "valid_pixels": int(result.valid.sum()), "material_pixels": int(field.outside.sum()),
+           "valid_fraction": float(result.valid.sum()/field.outside.sum()),
+           "rmse_mpa": float(np.sqrt(np.mean(errors**2))),
+           "median_absolute_error_mpa": float(np.median(np.abs(errors))),
+           "maximum_absolute_error_mpa": float(np.max(np.abs(errors))),
+           "errors_over_5_mpa": int((np.abs(errors)>5).sum()),
+           "approx_95pct_coverage": float(np.mean(np.abs(errors)<=1.96*result.standard_error_mpa[result.valid]))}
+np.savez_compressed(output/"reconstruction.npz", **vars(result), reference_delta_sigma_mpa=field.delta_sigma_mpa,
+                    x_mm=field.x_mm, y_mm=field.y_mm, material=field.outside, metadata_json=json.dumps(metrics))
+(output/"reconstruction_metrics.json").write_text(json.dumps(metrics, indent=2))
 fig = reconstruction_figure(field, result)
 fig.savefig(output/"POLARIS_X_Reconstruction.png", dpi=155, bbox_inches="tight")
 plt.close(fig)
