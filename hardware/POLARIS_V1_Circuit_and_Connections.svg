@@ -1,0 +1,447 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4400" height="3500" viewBox="0 0 4400 3500">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#087f8c"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="65" y="78.0" font-family="DejaVu Sans, sans-serif" font-size="59" font-weight="700" fill="#17324d" text-anchor="start">POLARIS · GROUP 18  |  PROPOSED V1 HARDWARE</text>
+<text x="67" y="131.0" font-family="DejaVu Sans, sans-serif" font-size="35" font-weight="400" fill="#526479" text-anchor="start">Transmission polariscope: motorized linear analyzer + USB image capture + optional measured load</text>
+<rect x="65" y="157" width="4270" height="55" rx="8" fill="#fff7e6" stroke="#dfc889" stroke-width="3"/>
+<text x="86" y="195.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">DESIGN PROPOSAL — not bench-tested. This sheet is the wiring basis; hardware firmware, calibration and experimental validation remain to be completed.</text>
+<rect x="60" y="245" width="1290" height="650" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="60" y="245" width="1290" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="82" y="291.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">A  |  EXTERNAL LOAD POWER</text>
+<text x="90" y="365.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#17324d" text-anchor="start">PS1: isolated, regulated 12 V DC / 3 A adapter</text>
+<text x="90" y="409.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#526479" text-anchor="start">Use an enclosed certified adapter; no mains wiring on this board.</text>
+<rect x="110" y="457" width="190" height="235" rx="12" fill="#f0f4f8" stroke="#17324d" stroke-width="3"/>
+<text x="205" y="515.0" font-family="DejaVu Sans, sans-serif" font-size="33" font-weight="700" fill="#17324d" text-anchor="middle">DC IN</text>
+<text x="205" y="565.0" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#c54036" text-anchor="middle">+12 V</text>
+<text x="205" y="644.0" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#526479" text-anchor="middle">0 V</text>
+<polyline points="300,545 460,545" fill="none" stroke="#c54036" stroke-width="5" stroke-linejoin="round"/>
+<rect x="460" y="526" width="100" height="38" rx="0" fill="white" stroke="#c54036" stroke-width="3"/>
+<line x1="470" y1="545" x2="550" y2="545" stroke="#c54036" stroke-width="4"/>
+<text x="510" y="494.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="middle">F1: 2 A fuse</text>
+<polyline points="560,545 715,545" fill="none" stroke="#c54036" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="715" cy="545" r="7" fill="#c54036"/>
+<circle cx="855" cy="545" r="7" fill="#c54036"/>
+<line x1="715" y1="545" x2="828" y2="502" stroke="#c54036" stroke-width="5"/>
+<text x="785" y="465.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="middle">SW1: ≥3 A at 12 V DC</text>
+<polyline points="855,545 1175,545" fill="none" stroke="#c54036" stroke-width="5" stroke-linejoin="round"/>
+<text x="1175" y="533.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#c54036" text-anchor="end">+12_SW</text>
+<circle cx="1175" cy="545" r="5" fill="#c54036"/>
+<text x="925" y="596.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#c54036" text-anchor="start">to A4988 VMOT</text>
+<text x="925" y="631.84" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#c54036" text-anchor="start">and LED panel +</text>
+<polyline points="300,645 630,645" fill="none" stroke="#526479" stroke-width="5" stroke-linejoin="round"/>
+<line x1="630" y1="645" x2="630" y2="663" stroke="#526479" stroke-width="4"/>
+<line x1="604" y1="663" x2="656" y2="663" stroke="#526479" stroke-width="4"/>
+<line x1="613" y1="673" x2="647" y2="673" stroke="#526479" stroke-width="4"/>
+<line x1="622" y1="683" x2="638" y2="683" stroke="#526479" stroke-width="4"/>
+<text x="695" y="671.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#526479" text-anchor="start">GND / 0 V common</text>
+<text x="95" y="759.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">Motor and LED return directly to the supply ground.</text>
+<text x="95" y="802.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Uno is powered only by laptop USB; leave Vin/barrel unused.</text>
+<text x="95" y="844.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#c54036" text-anchor="start">Never connect +12_SW to Uno 5V, USB, or an I/O pin.</text>
+<rect x="60" y="935" width="1290" height="1080" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="60" y="935" width="1290" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="82" y="981.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">B  |  LAPTOP + CAMERA</text>
+<text x="82" y="1038.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#526479" text-anchor="start">The camera sends images to the laptop, not to Arduino GPIO.</text>
+<rect x="125" y="1080" width="645" height="350" rx="12" fill="#eff6fa" stroke="#17324d" stroke-width="3"/>
+<text x="447" y="1140.0" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#17324d" text-anchor="middle">PC1  LAPTOP / USB HOST</text>
+<text x="155" y="1196.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="400" fill="#17324d" text-anchor="start">Python / OpenCV + serial control</text>
+<text x="155" y="1244.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">USB1: control commands ↔ Uno</text>
+<text x="155" y="1292.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">USB2: image frames ← camera</text>
+<text x="155" y="1360.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#526479" text-anchor="start">Two USB ports or a powered USB hub</text>
+<polyline points="770,1207 1210,1207" fill="none" stroke="#087f8c" stroke-width="5" stroke-linejoin="round"/>
+<text x="1208" y="1195.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">USB1 → UNO USB-B</text>
+<circle cx="1208" cy="1207" r="5" fill="#087f8c"/>
+<polyline points="770,1310 1110,1310 1110,1490" fill="none" stroke="#087f8c" stroke-width="5" stroke-linejoin="round"/>
+<rect x="840" y="1490" width="440" height="285" rx="12" fill="#eff6fa" stroke="#17324d" stroke-width="3"/>
+<text x="1060" y="1542.0" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#17324d" text-anchor="middle">CAM1  UVC CAMERA</text>
+<text x="870" y="1594.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">USB power + video from PC</text>
+<text x="870" y="1640.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="start">Manual exposure / gain / WB</text>
+<text x="870" y="1686.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Lens looks through P2</text>
+<text x="870" y="1733.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#c54036" text-anchor="start">No camera → Uno I/O wiring</text>
+<text x="120" y="1518.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#087f8c" text-anchor="start">CAMERA SELECTION</text>
+<text x="120" y="1570.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">UVC USB camera with controllable</text>
+<text x="120" y="1605.84" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">exposure, gain and white balance.</text>
+<text x="120" y="1641.68" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">Lock settings for an angle sweep.</text>
+<text x="120" y="1677.52" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">Calibrate response before using</text>
+<text x="120" y="1713.3600000000001" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">intensity for quantitative inversion.</text>
+<text x="95" y="1855.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#17324d" text-anchor="start">Capture protocol: command angle → wait for DONE → settle →</text>
+<text x="95" y="1900.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">discard buffered frames → capture → save angle + measured force.</text>
+<text x="95" y="1952.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#526479" text-anchor="start">Start with 300–500 ms settling; verify it on the assembled hardware.</text>
+<rect x="1390" y="245" width="1270" height="1770" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="1390" y="245" width="1270" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="1412" y="291.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">C  |  ARDUINO UNO R3 (5 V LOGIC)</text>
+<text x="1420" y="368.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#526479" text-anchor="start">Read signal names, not a clone board’s physical orientation.</text>
+<rect x="1530" y="435" width="725" height="1160" rx="12" fill="#eff7f4" stroke="#4c8172" stroke-width="3"/>
+<text x="1888" y="493.0" font-family="DejaVu Sans, sans-serif" font-size="42" font-weight="700" fill="#17324d" text-anchor="middle">U1  UNO R3</text>
+<text x="1888" y="545.0" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#087f8c" text-anchor="middle">USB powered</text>
+<line x1="1450" y1="625" x2="1530" y2="625" stroke="#087f8c" stroke-width="6"/>
+<text x="1450" y="594.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#087f8c" text-anchor="start">USB1</text>
+<text x="1570" y="635.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="400" fill="#17324d" text-anchor="start">USB-B socket</text>
+<text x="2195" y="660.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#7044b3" text-anchor="end">5V</text>
+<line x1="2255" y1="650" x2="2590" y2="650" stroke="#7044b3" stroke-width="5"/>
+<text x="2590" y="638.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="end">+5_LOGIC</text>
+<circle cx="2590" cy="650" r="5" fill="#7044b3"/>
+<text x="2195" y="745.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#526479" text-anchor="end">GND</text>
+<line x1="2255" y1="735" x2="2590" y2="735" stroke="#526479" stroke-width="5"/>
+<text x="2590" y="723.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#526479" text-anchor="end">GND</text>
+<circle cx="2590" cy="735" r="5" fill="#526479"/>
+<text x="2195" y="860.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D2 OUT</text>
+<line x1="2255" y1="850" x2="2590" y2="850" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="838.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">STEP</text>
+<circle cx="2590" cy="850" r="5" fill="#087f8c"/>
+<text x="2195" y="950.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D3 OUT</text>
+<line x1="2255" y1="940" x2="2590" y2="940" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="928.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">DIR</text>
+<circle cx="2590" cy="940" r="5" fill="#087f8c"/>
+<text x="2195" y="1040.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D4 OUT</text>
+<line x1="2255" y1="1030" x2="2590" y2="1030" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="1018.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">EN</text>
+<circle cx="2590" cy="1030" r="5" fill="#087f8c"/>
+<text x="2195" y="1130.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D5 IN</text>
+<line x1="2255" y1="1120" x2="2590" y2="1120" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="1108.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">HX_DT</text>
+<circle cx="2590" cy="1120" r="5" fill="#087f8c"/>
+<text x="2195" y="1220.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D6 OUT</text>
+<line x1="2255" y1="1210" x2="2590" y2="1210" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="1198.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">HX_SCK</text>
+<circle cx="2590" cy="1210" r="5" fill="#087f8c"/>
+<text x="2195" y="1310.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D7 IN</text>
+<line x1="2255" y1="1300" x2="2590" y2="1300" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="1288.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">HOME</text>
+<circle cx="2590" cy="1300" r="5" fill="#087f8c"/>
+<text x="2195" y="1400.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#087f8c" text-anchor="end">D9 OUT</text>
+<line x1="2255" y1="1390" x2="2590" y2="1390" stroke="#087f8c" stroke-width="5"/>
+<text x="2590" y="1378.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">LED_CTL</text>
+<circle cx="2590" cy="1390" r="5" fill="#087f8c"/>
+<text x="1580" y="1495.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">D0 / D1: reserve for USB serial</text>
+<text x="1580" y="1540.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#526479" text-anchor="start">All grounds join GND / 0 V</text>
+<text x="1425" y="1647.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="start">STARTUP BIAS RESISTORS (external)</text>
+<text x="1440" y="1710.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC</text>
+<circle cx="1440" cy="1722" r="5" fill="#7044b3"/>
+<line x1="1630" y1="1722" x2="1677.0" y2="1722" stroke="#17324d" stroke-width="4"/>
+<rect x="1677.0" y="1709" width="76" height="26" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="1753.0" y1="1722" x2="1800" y2="1722" stroke="#17324d" stroke-width="4"/>
+<text x="1715.0" y="1694.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">R_EN 10 kΩ</text>
+<line x1="1440" y1="1722" x2="1630" y2="1722" stroke="#7044b3" stroke-width="4"/>
+<line x1="1800" y1="1722" x2="1915" y2="1722" stroke="#17324d" stroke-width="4"/>
+<text x="1915" y="1710.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">EN</text>
+<circle cx="1915" cy="1722" r="5" fill="#087f8c"/>
+<text x="2080" y="1710.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">STEP</text>
+<circle cx="2080" cy="1722" r="5" fill="#087f8c"/>
+<line x1="2080" y1="1722" x2="2080" y2="1747.0" stroke="#17324d" stroke-width="4"/>
+<rect x="2067" y="1747.0" width="26" height="56" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="2080" y1="1803.0" x2="2080" y2="1828" stroke="#17324d" stroke-width="4"/>
+<text x="2103" y="1783.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">10 kΩ</text>
+<line x1="2080" y1="1828" x2="2080" y2="1846" stroke="#526479" stroke-width="4"/>
+<line x1="2054" y1="1846" x2="2106" y2="1846" stroke="#526479" stroke-width="4"/>
+<line x1="2063" y1="1856" x2="2097" y2="1856" stroke="#526479" stroke-width="4"/>
+<line x1="2072" y1="1866" x2="2088" y2="1866" stroke="#526479" stroke-width="4"/>
+<text x="2450" y="1710.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">DIR</text>
+<circle cx="2450" cy="1722" r="5" fill="#087f8c"/>
+<line x1="2450" y1="1722" x2="2450" y2="1747.0" stroke="#17324d" stroke-width="4"/>
+<rect x="2437" y="1747.0" width="26" height="56" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="2450" y1="1803.0" x2="2450" y2="1828" stroke="#17324d" stroke-width="4"/>
+<text x="2473" y="1783.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">10 kΩ</text>
+<line x1="2450" y1="1828" x2="2450" y2="1846" stroke="#526479" stroke-width="4"/>
+<line x1="2424" y1="1846" x2="2476" y2="1846" stroke="#526479" stroke-width="4"/>
+<line x1="2433" y1="1856" x2="2467" y2="1856" stroke="#526479" stroke-width="4"/>
+<line x1="2442" y1="1866" x2="2458" y2="1866" stroke="#526479" stroke-width="4"/>
+<text x="1425" y="1900.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#17324d" text-anchor="start">Boot: EN HIGH (disabled), STEP LOW, LED_CTL LOW.</text>
+<text x="1425" y="1944.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">STEP high/low ≥5 µs; wait ≥1 ms after driver wake-up.</text>
+<text x="1425" y="1980.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#087f8c" text-anchor="start">Repeated net labels are electrically connected.</text>
+<rect x="2700" y="245" width="1640" height="1020" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="2700" y="245" width="1640" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="2722" y="291.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">D  |  MOTORIZED ANALYZER: A4988 + BIPOLAR STEPPER</text>
+<rect x="3080" y="482" width="590" height="655" rx="12" fill="#f1f5fa" stroke="#17324d" stroke-width="3"/>
+<text x="3375" y="533.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#17324d" text-anchor="middle">U2  A4988 CARRIER</text>
+<text x="3160" y="364.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC</text>
+<circle cx="3160" cy="376" r="5" fill="#7044b3"/>
+<polyline points="3160,376 3160,482" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<text x="3190" y="466.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#7044b3" text-anchor="start">VDD</text>
+<circle cx="3160" cy="412" r="7" fill="#7044b3"/>
+<polyline points="3160,412 2950,412" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<line x1="2950" y1="412" x2="2950" y2="440" stroke="#17324d" stroke-width="4"/>
+<line x1="2927" y1="440" x2="2973" y2="440" stroke="#17324d" stroke-width="5"/>
+<line x1="2927" y1="455" x2="2973" y2="455" stroke="#17324d" stroke-width="5"/>
+<line x1="2950" y1="455" x2="2950" y2="485" stroke="#17324d" stroke-width="4"/>
+<text x="2985" y="455.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">C2 100 nF</text>
+<line x1="2950" y1="485" x2="2950" y2="503" stroke="#526479" stroke-width="4"/>
+<line x1="2924" y1="503" x2="2976" y2="503" stroke="#526479" stroke-width="4"/>
+<line x1="2933" y1="513" x2="2967" y2="513" stroke="#526479" stroke-width="4"/>
+<line x1="2942" y1="523" x2="2958" y2="523" stroke="#526479" stroke-width="4"/>
+<text x="3520" y="363.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#c54036" text-anchor="start">+12_SW</text>
+<circle cx="3520" cy="375" r="5" fill="#c54036"/>
+<polyline points="3520,375 3520,482" fill="none" stroke="#c54036" stroke-width="5" stroke-linejoin="round"/>
+<text x="3550" y="466.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#c54036" text-anchor="start">VMOT</text>
+<circle cx="3520" cy="409" r="7" fill="#c54036"/>
+<polyline points="3520,409 3870,409" fill="none" stroke="#c54036" stroke-width="5" stroke-linejoin="round"/>
+<line x1="3870" y1="409" x2="3870" y2="437" stroke="#17324d" stroke-width="4"/>
+<line x1="3847" y1="437" x2="3893" y2="437" stroke="#17324d" stroke-width="5"/>
+<line x1="3847" y1="452" x2="3893" y2="452" stroke="#17324d" stroke-width="5"/>
+<line x1="3870" y1="452" x2="3870" y2="482" stroke="#17324d" stroke-width="4"/>
+<text x="3827" y="432.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#c54036" text-anchor="start">+</text>
+<text x="3905" y="452.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">C1 100 µF / 35 V</text>
+<line x1="3870" y1="482" x2="3870" y2="500" stroke="#526479" stroke-width="4"/>
+<line x1="3844" y1="500" x2="3896" y2="500" stroke="#526479" stroke-width="4"/>
+<line x1="3853" y1="510" x2="3887" y2="510" stroke="#526479" stroke-width="4"/>
+<line x1="3862" y1="520" x2="3878" y2="520" stroke="#526479" stroke-width="4"/>
+<text x="3990" y="360.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#526479" text-anchor="middle">C1 close to VMOT/GND</text>
+<text x="2780" y="598.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">STEP</text>
+<circle cx="2780" cy="610" r="5" fill="#087f8c"/>
+<line x1="2780" y1="610" x2="3080" y2="610" stroke="#087f8c" stroke-width="5"/>
+<text x="3105" y="619.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">STEP</text>
+<text x="2780" y="683.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">DIR</text>
+<circle cx="2780" cy="695" r="5" fill="#087f8c"/>
+<line x1="2780" y1="695" x2="3080" y2="695" stroke="#087f8c" stroke-width="5"/>
+<text x="3105" y="704.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">DIR</text>
+<text x="2780" y="768.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">EN</text>
+<circle cx="2780" cy="780" r="5" fill="#087f8c"/>
+<line x1="2780" y1="780" x2="3080" y2="780" stroke="#087f8c" stroke-width="5"/>
+<text x="3105" y="789.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">ENABLE (LOW = on)</text>
+<text x="2825" y="893.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC</text>
+<circle cx="2825" cy="905" r="5" fill="#7044b3"/>
+<polyline points="2825,905 2825,1045" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="2825" cy="945" r="7" fill="#7044b3"/>
+<line x1="2825" y1="945" x2="3080" y2="945" stroke="#7044b3" stroke-width="5"/>
+<text x="3105" y="954.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">RESET</text>
+<circle cx="2825" cy="1045" r="7" fill="#7044b3"/>
+<line x1="2825" y1="1045" x2="3080" y2="1045" stroke="#7044b3" stroke-width="5"/>
+<text x="3105" y="1054.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">SLEEP</text>
+<text x="3180" y="1114.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="middle">MS1</text>
+<polyline points="3180,1137 3180,1200" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="3180" cy="1200" r="7" fill="#7044b3"/>
+<text x="3290" y="1114.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="middle">MS2</text>
+<polyline points="3290,1137 3290,1200" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="3290" cy="1200" r="7" fill="#7044b3"/>
+<text x="3400" y="1114.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="middle">MS3</text>
+<polyline points="3400,1137 3400,1200" fill="none" stroke="#7044b3" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="3400" cy="1200" r="7" fill="#7044b3"/>
+<line x1="3180" y1="1200" x2="3400" y2="1200" stroke="#7044b3" stroke-width="5"/>
+<text x="3240" y="1188.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC</text>
+<circle cx="3240" cy="1200" r="5" fill="#7044b3"/>
+<text x="2770" y="1234.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#17324d" text-anchor="start">All MS pins HIGH → 1/16 microstep</text>
+<text x="3540" y="1090.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#526479" text-anchor="middle">BOTH</text>
+<text x="3540" y="1120.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#526479" text-anchor="middle">GND pins</text>
+<line x1="3540" y1="1137" x2="3540" y2="1170" stroke="#526479" stroke-width="4"/>
+<line x1="3540" y1="1170" x2="3540" y2="1188" stroke="#526479" stroke-width="4"/>
+<line x1="3514" y1="1188" x2="3566" y2="1188" stroke="#526479" stroke-width="4"/>
+<line x1="3523" y1="1198" x2="3557" y2="1198" stroke="#526479" stroke-width="4"/>
+<line x1="3532" y1="1208" x2="3548" y2="1208" stroke="#526479" stroke-width="4"/>
+<rect x="3930" y="535" width="355" height="407" rx="12" fill="#f4f6f8" stroke="#a5b4c2" stroke-width="2" stroke-dasharray="9 9"/>
+<text x="4108" y="574.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="middle">M1  NEMA 17</text>
+<text x="4108" y="612.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="middle">4-wire bipolar</text>
+<text x="3640" y="659.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="end">1A</text>
+<line x1="3667" y1="650" x2="3930" y2="650" stroke="#087f8c" stroke-width="5"/>
+<circle cx="3930" cy="650" r="7" fill="#087f8c"/>
+<text x="3640" y="734.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="end">1B</text>
+<line x1="3667" y1="725" x2="3930" y2="725" stroke="#087f8c" stroke-width="5"/>
+<circle cx="3930" cy="725" r="7" fill="#087f8c"/>
+<text x="3640" y="819.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="end">2A</text>
+<line x1="3667" y1="810" x2="3930" y2="810" stroke="#087f8c" stroke-width="5"/>
+<circle cx="3930" cy="810" r="7" fill="#087f8c"/>
+<text x="3640" y="894.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="end">2B</text>
+<line x1="3667" y1="885" x2="3930" y2="885" stroke="#087f8c" stroke-width="5"/>
+<circle cx="3930" cy="885" r="7" fill="#087f8c"/>
+<text x="4100" y="691.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="middle">Coil A</text>
+<text x="4100" y="851.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="middle">Coil B</text>
+<path d="M3930 650 H3980 c32 0 32 25 0 25 c32 0 32 25 0 25 c32 0 32 25 0 25 H3930" fill="none" stroke="#17324d" stroke-width="4"/>
+<path d="M3930 810 H3980 c32 0 32 25 0 25 c32 0 32 25 0 25 c32 0 32 25 0 25 H3930" fill="none" stroke="#17324d" stroke-width="4"/>
+<text x="3755" y="995.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="start">200 full steps/rev; rated ≥0.60 A/phase</text>
+<text x="3755" y="1038.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#17324d" text-anchor="start">Find coil pairs with an ohmmeter.</text>
+<text x="3755" y="1080.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#526479" text-anchor="start">Wire colors are NOT standardized.</text>
+<text x="3755" y="1145.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">20T pulley → belt → 80T P2 ring</text>
+<text x="3755" y="1185.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Motor stays outside the light path.</text>
+<text x="3755" y="1225.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">P2 rotates on its own bearing.</text>
+<rect x="2700" y="1305" width="1640" height="710" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="2700" y="1305" width="1640" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="2722" y="1351.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">E  |  LED BACKLIGHT: DC ON/OFF, NOT PWM DURING CAPTURE</text>
+<text x="2740" y="1420.0" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#17324d" text-anchor="start">Q1: FQP30N06L logic-level N-MOSFET</text>
+<text x="2740" y="1464.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">TO-220, front marking facing you: 1=G, 2=D/tab, 3=S.</text>
+<rect x="3750" y="1530" width="510" height="162" rx="12" fill="#fff8df" stroke="#c68c12" stroke-width="3"/>
+<text x="4005" y="1571.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="middle">L1: 12 V white LED panel</text>
+<text x="4005" y="1614.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Built-in current limiting; ≤0.5 A</text>
+<text x="4005" y="1654.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Diffuser; illuminate entire field</text>
+<text x="4005" y="1486.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#c54036" text-anchor="middle">+12_SW</text>
+<circle cx="4005" cy="1498" r="5" fill="#c54036"/>
+<line x1="4005" y1="1498" x2="4005" y2="1530" stroke="#c54036" stroke-width="5"/>
+<text x="4040" y="1524.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#c54036" text-anchor="start">+</text>
+<polyline points="4005,1692 4005,1740 3510,1740 3510,1775" fill="none" stroke="#17324d" stroke-width="5" stroke-linejoin="round"/>
+<text x="4040" y="1719.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#17324d" text-anchor="start">−</text>
+<text x="2780" y="1818.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">LED_CTL</text>
+<circle cx="2780" cy="1830" r="5" fill="#087f8c"/>
+<line x1="2780" y1="1830" x2="3070" y2="1830" stroke="#087f8c" stroke-width="5"/>
+<line x1="3070" y1="1830" x2="3117.0" y2="1830" stroke="#17324d" stroke-width="4"/>
+<rect x="3117.0" y="1817" width="76" height="26" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="3193.0" y1="1830" x2="3240" y2="1830" stroke="#17324d" stroke-width="4"/>
+<text x="3155.0" y="1802.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">R_G 100 Ω</text>
+<line x1="3240" y1="1830" x2="3390" y2="1830" stroke="#087f8c" stroke-width="5"/>
+<circle cx="3290" cy="1830" r="7" fill="#17324d"/>
+<line x1="3290" y1="1830" x2="3290" y2="1852.0" stroke="#17324d" stroke-width="4"/>
+<rect x="3277" y="1852.0" width="26" height="56" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="3290" y1="1908.0" x2="3290" y2="1930" stroke="#17324d" stroke-width="4"/>
+<text x="3267" y="1888.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="end">R_PD 10 kΩ</text>
+<line x1="3290" y1="1930" x2="3290" y2="1948" stroke="#526479" stroke-width="4"/>
+<line x1="3264" y1="1948" x2="3316" y2="1948" stroke="#526479" stroke-width="4"/>
+<line x1="3273" y1="1958" x2="3307" y2="1958" stroke="#526479" stroke-width="4"/>
+<line x1="3282" y1="1968" x2="3298" y2="1968" stroke="#526479" stroke-width="4"/>
+<line x1="3390" y1="1785" x2="3390" y2="1875" stroke="#17324d" stroke-width="6"/>
+<line x1="3432" y1="1782" x2="3432" y2="1804" stroke="#17324d" stroke-width="6"/>
+<line x1="3432" y1="1818" x2="3432" y2="1840" stroke="#17324d" stroke-width="6"/>
+<line x1="3432" y1="1854" x2="3432" y2="1877" stroke="#17324d" stroke-width="6"/>
+<polyline points="3510,1775 3510,1795 3432,1795" fill="none" stroke="#17324d" stroke-width="5" stroke-linejoin="round"/>
+<polyline points="3432,1866 3510,1866 3510,1930" fill="none" stroke="#17324d" stroke-width="5" stroke-linejoin="round"/>
+<line x1="3432" y1="1829" x2="3480" y2="1829" stroke="#17324d" stroke-width="4"/>
+<line x1="3480" y1="1829" x2="3480" y2="1866" stroke="#17324d" stroke-width="4"/>
+<path d="M3453 1818 L3436 1829 L3453 1840 Z" fill="#17324d"/>
+<text x="3350" y="1772.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="end">G (1)</text>
+<text x="3560" y="1784.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">D (2/tab)</text>
+<text x="3560" y="1895.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">S (3)</text>
+<line x1="3510" y1="1930" x2="3510" y2="1948" stroke="#526479" stroke-width="4"/>
+<line x1="3484" y1="1948" x2="3536" y2="1948" stroke="#526479" stroke-width="4"/>
+<line x1="3493" y1="1958" x2="3527" y2="1958" stroke="#526479" stroke-width="4"/>
+<line x1="3502" y1="1968" x2="3518" y2="1968" stroke="#526479" stroke-width="4"/>
+<text x="2750" y="2000.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#17324d" text-anchor="start">LED_CTL HIGH = ON. Use a current-limited panel; never connect a bare power LED here.</text>
+<rect x="60" y="2055" width="1290" height="450" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="60" y="2055" width="1290" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="82" y="2101.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">F  |  HOME / INDEX SWITCH FOR P2</text>
+<text x="140" y="2178.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC</text>
+<circle cx="140" cy="2190" r="5" fill="#7044b3"/>
+<line x1="140" y1="2190" x2="140" y2="2217.0" stroke="#17324d" stroke-width="4"/>
+<rect x="127" y="2217.0" width="26" height="56" rx="0" fill="white" stroke="#17324d" stroke-width="3"/>
+<line x1="140" y1="2273.0" x2="140" y2="2300" stroke="#17324d" stroke-width="4"/>
+<text x="163" y="2253.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">R_H 4.7 kΩ</text>
+<polyline points="140,2300 825,2300" fill="none" stroke="#087f8c" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="140" cy="2300" r="7" fill="#17324d"/>
+<text x="825" y="2288.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="end">HOME → Uno D7</text>
+<circle cx="825" cy="2300" r="5" fill="#087f8c"/>
+<circle cx="490" cy="2300" r="7" fill="#17324d"/>
+<line x1="490" y1="2300" x2="490" y2="2328" stroke="#17324d" stroke-width="4"/>
+<line x1="467" y1="2328" x2="513" y2="2328" stroke="#17324d" stroke-width="5"/>
+<line x1="467" y1="2343" x2="513" y2="2343" stroke="#17324d" stroke-width="5"/>
+<line x1="490" y1="2343" x2="490" y2="2373" stroke="#17324d" stroke-width="4"/>
+<text x="525" y="2343.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="start">C_H 100 nF</text>
+<line x1="490" y1="2373" x2="490" y2="2391" stroke="#526479" stroke-width="4"/>
+<line x1="464" y1="2391" x2="516" y2="2391" stroke="#526479" stroke-width="4"/>
+<line x1="473" y1="2401" x2="507" y2="2401" stroke="#526479" stroke-width="4"/>
+<line x1="482" y1="2411" x2="498" y2="2411" stroke="#526479" stroke-width="4"/>
+<polyline points="140,2300 140,2375 865,2375" fill="none" stroke="#17324d" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="865" cy="2375" r="7" fill="#17324d"/>
+<circle cx="1060" cy="2350" r="7" fill="#17324d"/>
+<line x1="865" y1="2375" x2="1060" y2="2350" stroke="#17324d" stroke-width="5"/>
+<line x1="1060" y1="2350" x2="1150" y2="2350" stroke="#17324d" stroke-width="4"/>
+<line x1="1150" y1="2350" x2="1150" y2="2368" stroke="#526479" stroke-width="4"/>
+<line x1="1124" y1="2368" x2="1176" y2="2368" stroke="#526479" stroke-width="4"/>
+<line x1="1133" y1="2378" x2="1167" y2="2378" stroke="#526479" stroke-width="4"/>
+<line x1="1142" y1="2388" x2="1158" y2="2388" stroke="#526479" stroke-width="4"/>
+<text x="850" y="2200.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">SW2: NC contact</text>
+<text x="850" y="2244.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Opens at home index</text>
+<text x="805" y="2432.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="start">COM → GND; NC → HOME</text>
+<text x="95" y="2480.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#526479" text-anchor="start">Away = LOW; index/open wire = HIGH. Verify LOW on back-off; debounce + timeout.</text>
+<rect x="1390" y="2055" width="1400" height="450" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="1390" y="2055" width="1400" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="1412" y="2101.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">G  |  OPTIONAL FORCE MEASUREMENT (NOT MOTOR LOADING)</text>
+<rect x="1710" y="2170" width="420" height="245" rx="12" fill="#eef6f3" stroke="#17324d" stroke-width="3"/>
+<text x="1920" y="2204.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="middle">U3  HX711 MODULE</text>
+<text x="1780" y="2157.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#7044b3" text-anchor="start">+5_LOGIC → VCC</text>
+<circle cx="1780" cy="2169" r="5" fill="#7044b3"/>
+<line x1="1780" y1="2169" x2="1780" y2="2170" stroke="#7044b3" stroke-width="4"/>
+<text x="1430" y="2258.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">HX_DT</text>
+<circle cx="1430" cy="2270" r="5" fill="#087f8c"/>
+<line x1="1430" y1="2270" x2="1710" y2="2270" stroke="#087f8c" stroke-width="5"/>
+<text x="1730" y="2279.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#17324d" text-anchor="start">DT</text>
+<text x="1430" y="2338.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#087f8c" text-anchor="start">HX_SCK</text>
+<circle cx="1430" cy="2350" r="5" fill="#087f8c"/>
+<line x1="1430" y1="2350" x2="1710" y2="2350" stroke="#087f8c" stroke-width="5"/>
+<text x="1730" y="2359.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#17324d" text-anchor="start">SCK</text>
+<text x="1770" y="2400.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#526479" text-anchor="start">GND</text>
+<line x1="1800" y1="2415" x2="1800" y2="2425" stroke="#526479" stroke-width="4"/>
+<line x1="1800" y1="2425" x2="1800" y2="2443" stroke="#526479" stroke-width="4"/>
+<line x1="1774" y1="2443" x2="1826" y2="2443" stroke="#526479" stroke-width="4"/>
+<line x1="1783" y1="2453" x2="1817" y2="2453" stroke="#526479" stroke-width="4"/>
+<line x1="1792" y1="2463" x2="1808" y2="2463" stroke="#526479" stroke-width="4"/>
+<rect x="2420" y="2195" width="330" height="252" rx="12" fill="#f4f6f8" stroke="#17324d" stroke-width="3"/>
+<text x="2585" y="2228.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#17324d" text-anchor="middle">LC1: 4-wire</text>
+<text x="2585" y="2266.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">full-bridge cell</text>
+<text x="2585" y="2316.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="middle">Rated for fixture</text>
+<text x="2585" y="2355.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#17324d" text-anchor="middle">load, e.g. 2 kN</text>
+<text x="2585" y="2400.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#17324d" text-anchor="middle">In load path</text>
+<text x="2106" y="2237.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#17324d" text-anchor="end">E+</text>
+<line x1="2130" y1="2230" x2="2420" y2="2230" stroke="#087f8c" stroke-width="4"/>
+<text x="2290" y="2221.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#17324d" text-anchor="middle">E+ wire</text>
+<text x="2106" y="2287.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#17324d" text-anchor="end">E−</text>
+<line x1="2130" y1="2280" x2="2420" y2="2280" stroke="#087f8c" stroke-width="4"/>
+<text x="2290" y="2271.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#17324d" text-anchor="middle">E− wire</text>
+<text x="2106" y="2347.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#17324d" text-anchor="end">A+</text>
+<line x1="2130" y1="2340" x2="2420" y2="2340" stroke="#087f8c" stroke-width="4"/>
+<text x="2290" y="2331.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#17324d" text-anchor="middle">A+ wire</text>
+<text x="2106" y="2397.0" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#17324d" text-anchor="end">A−</text>
+<line x1="2130" y1="2390" x2="2420" y2="2390" stroke="#087f8c" stroke-width="4"/>
+<text x="2290" y="2381.0" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#17324d" text-anchor="middle">A− wire</text>
+<text x="1420" y="2490.0" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#526479" text-anchor="start">Match cell datasheet (not colors). Tare + calibrate in newtons. Channel B unused.</text>
+<rect x="2830" y="2055" width="1510" height="450" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="2830" y="2055" width="1510" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="2852" y="2101.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">H  |  SET CURRENT BEFORE RUNNING THE MOTOR</text>
+<text x="2865" y="2180.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">Start I_TRIP = 0.60 A/phase; never exceed the motor rating.</text>
+<text x="2865" y="2227.0" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#7044b3" text-anchor="start">A4988: VREF = 8 × I_TRIP × R_S</text>
+<text x="2865" y="2274.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#17324d" text-anchor="start">R_S = 0.068 Ω → 0.326 V;  R_S = 0.10 Ω → 0.480 V.</text>
+<text x="2865" y="2319.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Read actual sense resistors; clone carriers may use other values.</text>
+<text x="2865" y="2364.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">C1 polarity: + to VMOT, − to GND; mount close to the driver.</text>
+<text x="2865" y="2409.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Fit a heatsink and check temperature; keep power returns short.</text>
+<text x="2865" y="2464.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#c54036" text-anchor="start">POWER OFF before connecting or disconnecting motor leads.</text>
+<rect x="60" y="2545" width="4280" height="405" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="60" y="2545" width="4280" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="82" y="2591.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">I  |  OPTICAL PATH + ANALYZER MECHANICS</text>
+<text x="82" y="2648.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#526479" text-anchor="start">Optical arrows indicate the light path, not electrical wiring. The specimen is loaded by a separate manual fixture.</text>
+<rect x="95" y="2700" width="535" height="153" rx="10" fill="#fff8e6" stroke="#c68c12" stroke-width="3"/>
+<text x="362.5" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">L1 + DIFFUSER</text>
+<text x="362.5" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Uniform white backlight</text>
+<text x="362.5" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">DC illumination</text>
+<line x1="634" y1="2776" x2="667" y2="2776" stroke="#c68c12" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="675" y="2700" width="500" height="153" rx="10" fill="#fff8e6" stroke="#c68c12" stroke-width="3"/>
+<text x="925.0" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">P1: FIXED LINEAR</text>
+<text x="925.0" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Transmission axis sets 0°</text>
+<text x="925.0" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Film covers the field</text>
+<line x1="1179" y1="2776" x2="1212" y2="2776" stroke="#c68c12" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="1220" y="2700" width="660" height="153" rx="10" fill="#fff8e6" stroke="#c68c12" stroke-width="3"/>
+<text x="1550.0" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">PMMA / PC SPECIMEN</text>
+<text x="1550.0" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Manual rated loading frame</text>
+<text x="1550.0" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">LC1 in series if force is recorded</text>
+<line x1="1884" y1="2776" x2="1917" y2="2776" stroke="#c68c12" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="1925" y="2700" width="695" height="153" rx="10" fill="#fff8e6" stroke="#c68c12" stroke-width="3"/>
+<text x="2272.5" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">P2: ROTATING LINEAR</text>
+<text x="2272.5" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Bearing-supported 80T ring</text>
+<text x="2272.5" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Near camera lens; check vignetting</text>
+<line x1="2624" y1="2776" x2="2657" y2="2776" stroke="#c68c12" stroke-width="6" marker-end="url(#arrow)"/>
+<rect x="2665" y="2700" width="570" height="153" rx="10" fill="#fff8e6" stroke="#c68c12" stroke-width="3"/>
+<text x="2950.0" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">LENS + CAM1</text>
+<text x="2950.0" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Fixed camera; USB to PC</text>
+<text x="2950.0" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">No camera rotation</text>
+<rect x="3280" y="2700" width="1015" height="153" rx="10" fill="#eef6f3" stroke="#087f8c" stroke-width="3"/>
+<text x="3787.5" y="2740.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#17324d" text-anchor="middle">M1 → 20T : 80T BELT DRIVE</text>
+<text x="3787.5" y="2782.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">4:1 ratio; 200 × 16 × 4 = 12,800 pulses/rev</text>
+<text x="3787.5" y="2814.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#17324d" text-anchor="middle">Targets 0° / 45° / 90° / 135°: 0 / 1600 / 3200 / 4800</text>
+<text x="95" y="2909.0" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#17324d" text-anchor="start">Use LINEAR polarizers, not photographic circular/CPL filters. At 0°, P2 is parallel to P1; at 90°, crossed. Home SW2, then calibrate optical zero.</text>
+<rect x="60" y="2990" width="4280" height="405" rx="12" fill="#fbfdff" stroke="#c8d5df" stroke-width="3"/>
+<rect x="60" y="2990" width="4280" height="68" rx="12" fill="#eaf2f6" stroke="#c8d5df" stroke-width="3"/>
+<text x="82" y="3036.0" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#17324d" text-anchor="start">J  |  BUILD NOTES + CORRECTIONS TO THE PROJECT CLAIMS</text>
+<line x1="1455" y1="3080" x2="1455" y2="3365" stroke="#c8d5df" stroke-width="3"/>
+<line x1="2870" y1="3080" x2="2870" y2="3365" stroke="#c8d5df" stroke-width="3"/>
+<text x="90" y="3110.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#087f8c" text-anchor="start">BUILD / CHECK</text>
+<text x="90" y="3155.0" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Common GND everywhere; +5_LOGIC is Uno USB 5 V.</text>
+<text x="90" y="3189.56" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Use terminal wiring for motor/LED power.</text>
+<text x="90" y="3224.12" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">Identify coils, set VREF, then home and verify direction.</text>
+<text x="90" y="3258.68" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">One-direction approach reduces belt backlash.</text>
+<text x="90" y="3293.24" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#17324d" text-anchor="start">0.028125°/pulse is a command increment, not accuracy.</text>
+<text x="1490" y="3110.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#087f8c" text-anchor="start">ACQUIRE / CALIBRATE</text>
+<text x="1490" y="3155.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Warm up the light; lock exposure, gain and white balance.</text>
+<text x="1490" y="3188.28" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Record dark/flat references and angle-tagged images.</text>
+<text x="1490" y="3221.56" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Check repeatable 0°, 45°, 90°, 135° positions.</text>
+<text x="1490" y="3254.84" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Measure thickness and stress-optic coefficient C.</text>
+<text x="1490" y="3288.12" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Use a rated fixture; 1000 N in simulation is not a load command.</text>
+<text x="2905" y="3110.0" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#087f8c" text-anchor="start">WHAT THIS V1 CAN CLAIM</text>
+<text x="2905" y="3155.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Initial output: qualitative polarization / stress-pattern images.</text>
+<text x="2905" y="3188.28" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">White LED + RGB camera ≠ three monochromatic channels.</text>
+<text x="2905" y="3221.56" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">Quantitative MPa needs spectral/camera/material calibration.</text>
+<text x="2905" y="3254.84" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">CNN defect labels and pass/fail need labelled physical tests.</text>
+<text x="2905" y="3288.12" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#17324d" text-anchor="start">The current simulation is not a validated physical digital twin.</text>
+<text x="65" y="3444.0" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#526479" text-anchor="start">NET LEGEND:  +12_SW (red) · +5_LOGIC (purple) · signals (teal) · GND (gray). Repeated labels connect; a dot marks a junction. Module pins are functional labels, not a PCB footprint.</text>
+</svg>

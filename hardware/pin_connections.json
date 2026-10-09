@@ -1,0 +1,11 @@
+{
+  "D2": "A4988 STEP",
+  "D3": "A4988 DIR",
+  "D4": "A4988 ENABLE (active LOW)",
+  "D5": "HX711 DT (optional)",
+  "D6": "HX711 SCK (optional)",
+  "D7": "HOME NC switch",
+  "D9": "100 ohm -> Q1 gate",
+  "5V": "A4988 VDD + configuration straps + HX711 VCC + pull-ups",
+  "GND": "PS1 negative + both A4988 grounds + Q1 source + HX711 ground + switch COM"
+}
