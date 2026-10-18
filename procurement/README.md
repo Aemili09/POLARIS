@@ -1,5 +1,7 @@
 # POLARIS sections 1–5: purchase comparison worksheet
 
+**Superseded for purchase decisions:** use the [finalized component workbook](finalized/README.md), which removes mandatory spare quantities, separates optional items, adds missing mounting requirements, and marks unresolved compatibility checks. This older file remains a record of the initial hypothetical budget.
+
 **No current prices, cheapest seller, stock or seller reliability have been verified.** The supplier sites were blocked from this environment. Amounts below are hypothetical budget allocations, not product quotations. Links are site-specific Google searches, not verified product listings.
 
 [Download the comparison workbook](https://github.com/Aemili09/POLARIS/raw/refs/heads/main/procurement/POLARIS_Sections_1_to_5_Budget_and_Supplier_Searches.xlsx)

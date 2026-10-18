@@ -1,0 +1,682 @@
+{
+  "scope": "Motorized qualitative polarization acquisition; unbuilt; no live prices",
+  "core": [
+    [
+      "B01",
+      "Arduino Uno R3 ATmega328P",
+      1,
+      "board",
+      "1 board; use existing if available",
+      "5 V logic; 16 MHz; Uno pin layout; USB data interface",
+      "SPEC READY",
+      "U1; D2/D3/D4/D7/D9 control; D5/D6 reserved for optional HX711",
+      "Confirm actual USB socket and USB driver; USB powered, Vin/barrel unused."
+    ],
+    [
+      "B02",
+      "A4988 carrier with heatsink",
+      1,
+      "driver assembly",
+      "1 set; do not separately buy an included heatsink",
+      "STEP/DIR; adjustable current limit; 1/16 microsteps; documented pinout and Rs",
+      "SPEC READY",
+      "U2; motor power stage",
+      "Current-sense resistor value must be known. 0.60 A initial setting needs actual torque/temperature test. Carrier header pins may be loose or absent; see B35."
+    ],
+    [
+      "B03",
+      "NEMA17 4-wire bipolar stepper; 17HS4401 candidate",
+      1,
+      "motor",
+      "1 motor",
+      "200 full steps/rev (1.8 degrees); 4 wire; phase rating >=0.60 A; 5 mm shaft for selected pulley",
+      "VERIFY DATASHEET",
+      "M1; rotates analyzer, not specimen loading",
+      "17HS4401 listings vary. Confirm shaft, phase current, dimensions and winding pairs; do not assume identical specifications from model name."
+    ],
+    [
+      "B04",
+      "UVC USB camera; Logitech C270 candidate only",
+      1,
+      "camera",
+      "1 AFTER camera-control and field-of-view check",
+      "Lockable exposure, gain and white balance; stable focus; usable working distance/field of view; supported laptop software",
+      "HOLD: COMPATIBILITY",
+      "CAM1 -> laptop USB, never Uno GPIO",
+      "C270 is not a guaranteed measurement-camera selection. Confirm disabling automatic processing on intended OS, focus on specimen, and visibility through analyzer opening. Buy another documented UVC camera if it fails."
+    ],
+    [
+      "B05",
+      "Isolated regulated 12 V DC / 3 A enclosed adapter",
+      1,
+      "adapter",
+      "1",
+      "Reputable supply; adequate protection; declared connector/polarity; no exposed mains terminals",
+      "SPEC READY",
+      "PS1; external motor and LED supply",
+      "Match B30 socket. Logic still comes from Uno USB. 3 A is adapter capacity, not guaranteed circuit draw."
+    ],
+    [
+      "B06",
+      "FQP30N06L logic-level N-channel MOSFET",
+      1,
+      "MOSFET",
+      "1; a second is an optional spare",
+      "TO-220; manufacturer-documented G/D/S; specified operation with 5 V gate drive",
+      "SPEC READY",
+      "Q1; low-side LED switching",
+      "Front marked face: 1 gate, 2 drain/tab, 3 source for selected device. Do not substitute a non-logic-level MOSFET blindly."
+    ],
+    [
+      "B07",
+      "SPDT lever microswitch; Omron SS-5GL candidate",
+      1,
+      "switch",
+      "1; a second is an optional spare",
+      "COM/NC/NO; compatible lever travel and mounting; documented terminals",
+      "VERIFY MOUNT",
+      "SW2; NC home switch to D7",
+      "Use COM and NC. B16 provides adjustable mount and moving-ring actuator. Mechanical home is not calibrated optical zero."
+    ],
+    [
+      "B08",
+      "Visible linear polarizing film (P1 and P2)",
+      2,
+      "optical pieces",
+      "Start with 1 CUTTABLE 150 x 150 mm sheet only if both blanks fit; otherwise 2 sheets",
+      "Non-adhesive visible LINEAR film; not photographic CPL; request transmission/extinction specs",
+      "HOLD: CUT LAYOUT",
+      "P1 fixed input + P2 rotating analyzer",
+      "Two filters are required, not necessarily two retail sheets. Illustrative layout: 110 x 60 mm P1 blank plus <=50 mm P2 blank fits one 150 x 150 mm sheet. Confirm holder margins, clear aperture and vignetting before cutting or buying."
+    ],
+    [
+      "B09",
+      "12 V diffused white LED backlight panel",
+      1,
+      "panel",
+      "1 integrated panel with current limiting and diffuser",
+      "Illuminated area >=100 x 50 mm for initial view; <=0.5 A at 12 V; documented integrated current limiting",
+      "VERIFY LISTING",
+      "L1; + to switched 12 V, - to Q1 drain",
+      "Default selection includes diffuser. If absent, add O01; if no internal current limiting, this selection is not electrically compatible without a correctly designed LED driver."
+    ],
+    [
+      "B10",
+      "Fixed P1 polarizer frame",
+      1,
+      "holder",
+      "1 fabricated frame or existing equivalent",
+      "Holds selected film flat; adjustable orientation; clear aperture covers illuminated specimen region",
+      "FABRICATE",
+      "Supports P1",
+      "Can be fabricated with base supports; do not pay twice if bundled into assembly."
+    ],
+    [
+      "B11",
+      "Custom 80T GT2 annular analyzer ring AND P2 holder",
+      1,
+      "ring/holder assembly",
+      "1 combined assembly; no second rotating filter holder",
+      "2 mm pitch; tooth profile matches belt; 6 mm belt; optical opening; film retention; bearing interface",
+      "HOLD: DRAWING",
+      "Driven 80T ring; P2 mounting",
+      "NOT a standard solid pulley. 80T x 2 mm pitch gives ~50.9 mm pitch diameter; usable clear aperture is smaller. Size aperture with camera optical cone; include ring balance and retention."
+    ],
+    [
+      "B12",
+      "GT2 closed-loop timing belt",
+      1,
+      "belt",
+      "1 AFTER centre distance and tension travel are fixed",
+      "2 mm pitch, 6 mm width, matching tooth profile; length from mechanical drawing",
+      "HOLD: LENGTH",
+      "Connects 20T motor pulley to 80T ring",
+      "Do not guess belt length. Slotted motor mount or another specified adjustment must provide tension control."
+    ],
+    [
+      "B13",
+      "GT2 20T motor pulley",
+      1,
+      "pulley",
+      "1 with grub screws",
+      "2 mm pitch; 6 mm belt; 5 mm shaft bore if B03 verified as 5 mm",
+      "VERIFY SHAFT",
+      "20T drive; 4:1 reduction with B11",
+      "Same belt/tooth profile as B11/B12. Match actual shaft and provide secure retention."
+    ],
+    [
+      "B14",
+      "Bearing / roller support for analyzer ring",
+      1,
+      "support assembly",
+      "1 assembly AFTER drawing; individual bearing quantity from drawing",
+      "Allows clear optical aperture; constrains ring axially/radially; compatible with B11",
+      "HOLD: DRAWING",
+      "Supports rotating P2 independently of motor",
+      "Exact bearing size/quantity cannot be finalized without the ring drawing. Do not buy an arbitrary shaft bearing that blocks the camera view."
+    ],
+    [
+      "B15",
+      "NEMA17 adjustable mounting bracket",
+      1,
+      "bracket",
+      "1 bracket; integrate adjustment into bracket or base",
+      "NEMA17 pattern; suitable screw depth; slotted adjustment for belt tension",
+      "VERIFY LAYOUT",
+      "Motor mount and belt tension adjustment",
+      "If bracket is not slotted, provide slots in base. No extra idler is mandated when sufficient adjustment is built in."
+    ],
+    [
+      "B16",
+      "Home-switch bracket and ring actuator/cam",
+      1,
+      "paired mechanical set",
+      "1 set, integrated with ring/base where possible",
+      "Adjustable switch position; reliable press/release; clearance during rotation",
+      "FABRICATE",
+      "Makes SW2 physically actuate at home",
+      "Missing from earlier shopping list. Include cam/flag in B11 fabrication quote where possible; do not double-charge the integrated feature."
+    ],
+    [
+      "B17",
+      "Rigid adjustable camera mount",
+      1,
+      "mount",
+      "1 matched to chosen camera",
+      "Locks viewing direction/working distance; compatible with actual camera body",
+      "VERIFY CAMERA",
+      "Camera support",
+      "C270 does not automatically provide a standard tripod socket. Confirm mount interface before purchase."
+    ],
+    [
+      "B18",
+      "Specimen holder with two gentle edge supports",
+      1,
+      "holder assembly",
+      "1 non-loading holder",
+      "Maintains specimen position; unobstructed viewing region; avoids unintended bending/clamping stress",
+      "FABRICATE",
+      "Holds sample between P1 and P2",
+      "Missing from earlier list. NOT a tensile loading fixture. Hold outside viewed region; document mounting-induced baseline changes."
+    ],
+    [
+      "B19",
+      "Backlight/diffuser support",
+      1,
+      "mount",
+      "1; omit separate purchase if panel/base kit includes it",
+      "Rigid support for B09; adjustable position/alignment",
+      "FABRICATE / BUNDLE",
+      "Holds source before P1",
+      "Missing as an explicit item previously. Can share fabricated rail/base with other fixed mounts."
+    ],
+    [
+      "B20",
+      "Rigid optical base / rail",
+      1,
+      "base assembly",
+      "1 AFTER working-distance layout",
+      "Rigid board or metal base; feet/support; dimensions based on optics and camera focus",
+      "HOLD: LAYOUT",
+      "Mechanical reference for entire setup",
+      "Earlier 300 x 200 mm was illustrative, not finalized. Allow actual camera working distance, specimen and belt clearances."
+    ],
+    [
+      "B21",
+      "M3/M4 fasteners, washers, standoffs",
+      1,
+      "assembly kit",
+      "1 kit; exact lengths/count after drawings",
+      "Match motor, base, mounts, bearing supports and circuit-board mounting",
+      "VERIFY LAYOUT",
+      "Secures electronics and optics",
+      "One integrated fastener kit, not separate unexplained kits for each holder."
+    ],
+    [
+      "B22",
+      "10 kΩ 1/4 W 1% metal-film resistor",
+      4,
+      "resistors",
+      "4 installed; buy minimum pack; rest are spares",
+      "10 kΩ, axial, 0.25 W, 1%",
+      "SPEC READY",
+      "R1 ENABLE pull-up; R2 STEP pull-down; R3 DIR pull-down; R6 MOSFET gate pull-down",
+      "Earlier quantity 10 included 6 extras. All four functions remain in the current circuit."
+    ],
+    [
+      "B23",
+      "4.7 kΩ 1/4 W 1% metal-film resistor",
+      1,
+      "resistor",
+      "1 installed; buy minimum pack",
+      "4.7 kΩ, axial, 0.25 W, 1%",
+      "SPEC READY",
+      "R4; D7 HOME pull-up",
+      "Earlier quantity 5 included 4 extras."
+    ],
+    [
+      "B24",
+      "100 Ω 1/4 W 1% metal-film resistor",
+      1,
+      "resistor",
+      "1 installed; buy minimum pack",
+      "100 Ω, axial, 0.25 W, 1%",
+      "SPEC READY",
+      "R5; D9 to Q1 gate series resistor",
+      "Earlier quantity 5 included 4 extras."
+    ],
+    [
+      "B25",
+      "100 µF 35 V radial electrolytic capacitor",
+      1,
+      "capacitor",
+      "1 installed; spare optional",
+      "100 µF, 35 V, radial, preferably 105°C",
+      "SPEC READY",
+      "C1; VMOT to common GND",
+      "Positive to VMOT, negative to GND; physically close to A4988. Earlier quantity 2 included a spare."
+    ],
+    [
+      "B26",
+      "100 nF / 0.1 µF 50 V X7R ceramic capacitor",
+      2,
+      "capacitors",
+      "2 installed; buy minimum pack",
+      "100 nF, 50 V, X7R, leaded for perfboard",
+      "SPEC READY",
+      "C2 A4988 VDD bypass; C3 HOME filter",
+      "Earlier quantity 5 included 3 extras. Keep both circuit functions."
+    ],
+    [
+      "B27",
+      "SPST DC power switch",
+      1,
+      "switch",
+      "1",
+      "Documented rating >=3 A at 12 V DC",
+      "SPEC READY",
+      "SW1; external motor/LED supply switch",
+      "Not interchangeable with home microswitch SW2. Cutting this switch does not remove Uno USB power."
+    ],
+    [
+      "B28",
+      "Inline fuse holder",
+      1,
+      "holder",
+      "1",
+      "Matches fuse dimensions; suitable current/DC voltage rating; insulated",
+      "VERIFY FUSE",
+      "F1 holder",
+      "Keep holder and fuse physically compatible."
+    ],
+    [
+      "B29",
+      "2 A fuse",
+      1,
+      "fuse installed",
+      "1 installed; spare fuses optional",
+      "Adequate DC rating; selected format and time characteristic",
+      "VERIFY INRUSH",
+      "F1; external power protection",
+      "2 A is provisional circuit choice; verify startup demand and wire protection during bench testing. Earlier 3 were 1 installed + 2 spares."
+    ],
+    [
+      "B30",
+      "Female DC barrel jack to screw terminal",
+      1,
+      "power connector",
+      "1 only if adapter lead requires it",
+      "Matches B05 connector; typically 5.5 x 2.1 mm centre-positive, but verify",
+      "CONDITIONAL PURCHASE",
+      "PS1 adapter connection",
+      "Do not buy if equivalent suitable connector is already included in power assembly."
+    ],
+    [
+      "B31",
+      "2-position screw terminal blocks",
+      5,
+      "blocks in proposed perfboard layout",
+      "5 if using this termination plan; existing equivalent may replace them",
+      ">=3 A; conductor-compatible; 5.08 mm pitch works with 2.54 mm perfboard spacing",
+      "LAYOUT CHOICE",
+      "DC input pair; LED pair; motor coil A pair; motor coil B pair; logic supply pair",
+      "Five is a specified implementation allowance, not an IC requirement. Count may change if using different connectors; do not buy both complete connector schemes."
+    ],
+    [
+      "B32",
+      "Signal wiring / Arduino jumper pigtail harness",
+      1,
+      "harness kit",
+      "1 combined kit, not two mandatory separate kits",
+      "24-26 AWG signal wire plus compatible male/female jumper ends as needed",
+      "SPEC READY",
+      "Uno-to-driver/home/gate signals and 5 V distribution",
+      "Earlier hookup-wire and jumper sets overlapped. Include usable connections to Uno headers; no high-current motor/LED path through flimsy jumpers."
+    ],
+    [
+      "B33",
+      "Power wiring",
+      1,
+      "wire assortment",
+      "A few metres; cut lengths after layout",
+      "20-22 AWG stranded for short runs; insulation/rating appropriate; correct terminations",
+      "SPEC READY",
+      "Adapter, driver VMOT, motor and LED current paths",
+      "Route high-current returns directly to supply ground; join logic reference without passing load current through Uno."
+    ],
+    [
+      "B34",
+      "Solderable perfboard",
+      1,
+      "board assembly",
+      "1 suitably sized board; second only if layout demands it",
+      "Supports driver sockets, resistors, capacitors and terminals with insulation/clearance",
+      "VERIFY LAYOUT",
+      "Interconnect assembly",
+      "Earlier 2 were an allowance, not an established requirement. Secure board on standoffs; mount C1 close to driver."
+    ],
+    [
+      "B35",
+      "A4988 carrier pin headers and mating sockets",
+      1,
+      "connector set",
+      "2 x 8-pin female socket strips; add 2 x 8-pin male headers only if carrier lacks them",
+      "2.54 mm pitch; actual carrier compatible; soldered securely",
+      "CHECK BUNDLE",
+      "Connects driver carrier to perfboard",
+      "Previously missing/implicit. Not a breadboard purchase. Verify header length and spacing before assembly."
+    ],
+    [
+      "B36",
+      "Heat-shrink insulation and cable restraints",
+      1,
+      "small assortment",
+      "1 assortment or available lab stock",
+      "Sizes matched to joints; cable ties/strain relief where needed",
+      "SPEC READY",
+      "Insulates connections and secures cables",
+      "Existing supplies are sufficient; no need for multiple large kits."
+    ],
+    [
+      "B37",
+      "Uno USB DATA cable",
+      1,
+      "cable in use",
+      "0 if included/owned; otherwise 1",
+      "Matches board USB port; standard Uno R3 normally USB-B; laptop-compatible other end",
+      "CHECK BUNDLE",
+      "Laptop -> Uno USB power/data",
+      "Do not buy a charging-only cable. Camera normally has its own USB lead; do not add a duplicate camera cable without need."
+    ],
+    [
+      "B38",
+      "Clear uncoloured solid polycarbonate coupon",
+      1,
+      "specimen minimum",
+      "1 minimum; additional independent specimens for later tests",
+      "Nominal 200 x 40 x 5 mm; clear uncoated surface; measure actual thickness",
+      "VERIFY MATERIAL",
+      "Specimen for initial optical acquisition",
+      "One initial material is sufficient. PMMA is optional, not required simultaneously. Initial inspection can examine existing residual patterns; no-load holder does not provide controlled applied stress."
+    ]
+  ],
+  "optional": [
+    [
+      "O01",
+      "Separate opal diffuser",
+      "CONDITIONAL",
+      "1 only if B09 lacks effective diffusion",
+      "Place before P1. Integrated diffused panel is the default; do not buy twice."
+    ],
+    [
+      "O02",
+      "Clear PMMA / acrylic comparison coupon",
+      "OPTIONAL LATER",
+      "0 for initial build",
+      "Second material is not required to make the system operate. Separate material calibration if later added."
+    ],
+    [
+      "O03",
+      "Extra MOSFET / home switch / bulk capacitor",
+      "OPTIONAL SPARES",
+      "0 extras required",
+      "One of each is installed. Spares are useful but not part of minimum circuit."
+    ],
+    [
+      "O04",
+      "Extra resistors / ceramic capacitors / fuses",
+      "OPTIONAL SPARES / PACK EXCESS",
+      "Only minimum pack excess",
+      "Installed counts: 10k x4; 4.7k x1; 100Ω x1; 100nF x2; 100µF x1; fuse x1."
+    ],
+    [
+      "O05",
+      "Matte-black light shield / enclosure",
+      "RECOMMENDED",
+      "1 if ambient illumination is not well controlled",
+      "Strongly useful for repeatable acquisition but not an electrical circuit component. Use existing controlled enclosure if available."
+    ],
+    [
+      "O06",
+      "Powered USB hub / USB-C adapters",
+      "CONDITIONAL",
+      "Only if laptop connections/power require it",
+      "Need simultaneous camera and Uno data connections; check bandwidth and USB power, not just socket count."
+    ],
+    [
+      "O07",
+      "HX711 module + full-bridge load cell",
+      "OPTIONAL MODULE",
+      "0 for core build",
+      "Shown as optional in existing circuit. Add together when recording applied force; DT D5, SCK D6, VCC 5 V and GND; bridge E±/A± matched to datasheet."
+    ],
+    [
+      "O08",
+      "Rated loading frame / grips / load-cell mounting",
+      "REQUIRED FOR CONTROLLED APPLIED-LOAD TESTS",
+      "Not part of qualitative acquisition core",
+      "Use a suitable laboratory frame if available. A specimen holder alone cannot apply known tensile force; adding only a load cell does not make a loading system."
+    ],
+    [
+      "O09",
+      "Encoder / closed-loop motion sensing",
+      "OPTIONAL FUTURE",
+      "0 initially",
+      "Homing plus step counting is the current design; encoder would require additional design and firmware."
+    ],
+    [
+      "O10",
+      "Laser / quarter-wave plates / spectral LEDs",
+      "NOT IN CURRENT V1",
+      "0",
+      "These are future optical variants; adding them changes calibration/model requirements."
+    ],
+    [
+      "O11",
+      "Second rotating analyzer holder",
+      "DUPLICATE — DO NOT BUY",
+      "0",
+      "Already included in B11 annular ring assembly."
+    ],
+    [
+      "O12",
+      "Large solderless breadboard",
+      "OPTIONAL BENCH TOOL",
+      "0 required for final circuit",
+      "Perfboard implementation is selected; breadboard must not substitute for suitable high-current connections."
+    ],
+    [
+      "O13",
+      "Separate LED constant-current driver",
+      "NOT NEEDED WITH SPECIFIED PANEL",
+      "0 if B09 includes current limiting",
+      "If using a bare LED, this becomes a redesign requirement. Do not operate a bare power LED from 12 V directly."
+    ]
+  ],
+  "gates": [
+    [
+      "G01",
+      "Camera model / controls / optics",
+      "Before camera purchase",
+      "Verify actual OS can lock exposure/gain/WB, focus covers specimen working distance and full viewing area passes through proposed analyzer aperture. C270 is only a candidate."
+    ],
+    [
+      "G02",
+      "Ring and support drawing",
+      "Before B11/B14 fabrication",
+      "Specify aperture, tooth profile, bearing/roller geometry, axial restraint, film retention, mount and switch actuator. Check that no bearing blocks the optical path."
+    ],
+    [
+      "G03",
+      "Belt and base dimensions",
+      "Before B12/B20 order",
+      "Choose centre distance and tension adjustment, then belt length; allow working distance. 300 x 200 mm is not a validated base size."
+    ],
+    [
+      "G04",
+      "Polarizer cut layout",
+      "Before B08 order/cut",
+      "Two usable filters must fit selected material sheet including clamping margins. One retail sheet is enough only if both footprints fit."
+    ],
+    [
+      "G05",
+      "Power and bundle compatibility",
+      "Before electrical order",
+      "Confirm adapter/socket polarity, LED internal current limiting, driver Rs, carrier headers, heatsink and USB data cable inclusion."
+    ],
+    [
+      "G06",
+      "Electrical bench check",
+      "Before motor/LED operation",
+      "Inspect polarity/continuity; set current limit from actual Rs; check no 12 V to logic; test supply and switching, then temperature and motor torque. Proposed circuit is not bench validated."
+    ],
+    [
+      "G07",
+      "Homing / capture firmware",
+      "Before automated acquisition",
+      "Implement boot disabled, timeout, debounce, switch-release validation, optical zero, move-complete acknowledgement, settling and fresh-frame capture. Wiring alone does not provide this software."
+    ],
+    [
+      "G08",
+      "Optical repeatability / calibration",
+      "Before measurement claims",
+      "Empty-path sweep, dark/flat checks, fixed camera controls, remount repeats and known specimen thickness. Qualitative images first; calibrated MPa and AI are not guaranteed outputs."
+    ],
+    [
+      "G09",
+      "Loaded tests",
+      "Before applying controlled force",
+      "Use rated fixture/grips and appropriate force measurement. Core specimen holder and stepper do not apply or measure tensile load."
+    ]
+  ],
+  "connections": [
+    [
+      "Uno USB",
+      "Laptop USB data port",
+      "USB powers Uno; Vin/barrel unused",
+      "B01,B37"
+    ],
+    [
+      "Camera USB",
+      "Laptop second data connection",
+      "Not Uno GPIO; fix exposure/gain/WB",
+      "B04"
+    ],
+    [
+      "D2",
+      "A4988 STEP",
+      "R2 10k to GND",
+      "B01,B02,B22"
+    ],
+    [
+      "D3",
+      "A4988 DIR",
+      "R3 10k to GND",
+      "B01,B02,B22"
+    ],
+    [
+      "D4",
+      "A4988 ENABLE",
+      "Active low; R1 10k to +5 V; boot disabled",
+      "B01,B02,B22"
+    ],
+    [
+      "D7",
+      "Home switch NC",
+      "COM to GND; R4 4.7k to +5 V; C3 100nF to GND",
+      "B07,B16,B23,B26"
+    ],
+    [
+      "D9",
+      "R5 100Ω -> Q1 gate",
+      "R6 10k gate to GND",
+      "B06,B22,B24"
+    ],
+    [
+      "Q1 source pin 3",
+      "Common GND",
+      "FQP30N06L marked-face convention; verify datasheet",
+      "B06"
+    ],
+    [
+      "Q1 drain pin 2/tab",
+      "LED negative",
+      "LED positive to switched +12 V",
+      "B06,B09"
+    ],
+    [
+      "Uno 5V",
+      "A4988 VDD, MS1/MS2/MS3, RESET, SLEEP, pull-ups",
+      "C2 100nF VDD-GND; all mode pins high = 1/16",
+      "B01,B02,B22,B23,B26"
+    ],
+    [
+      "Adapter positive",
+      "F1 -> SW1 -> switched +12 V",
+      "A4988 VMOT and LED positive; NOT Uno 5V",
+      "B05,B27,B28,B29,B30"
+    ],
+    [
+      "Adapter negative",
+      "Common GND",
+      "Both A4988 GND pins; Uno GND; Q1 source; switch COM; returns routed appropriately",
+      "B01,B02,B05,B06,B07,B33"
+    ],
+    [
+      "C1 100µF",
+      "Positive VMOT; negative GND",
+      "Close to motor driver; 35 V rating",
+      "B25"
+    ],
+    [
+      "A4988 1A / 1B",
+      "One motor winding",
+      "Identify pairs by meter with power OFF",
+      "B02,B03"
+    ],
+    [
+      "A4988 2A / 2B",
+      "Other motor winding",
+      "Never swap leads while powered",
+      "B02,B03"
+    ],
+    [
+      "20T -> belt -> 80T ring",
+      "P2 analyzer rotates on independent support",
+      "4:1; 12,800 microstep commands/rev at 200 motor steps and 1/16",
+      "B03,B11,B12,B13,B14,B15"
+    ],
+    [
+      "Optical order",
+      "LED/diffuser -> P1 -> specimen -> P2 -> camera",
+      "P1 fixed; P2 rotates; holder must not obstruct light",
+      "B04,B08,B09,B10,B11,B17,B18,B19"
+    ],
+    [
+      "D5 / D6",
+      "Unused in core; HX711 DT / SCK if module added",
+      "Optional module requires separate mechanical loading design",
+      "O07,O08"
+    ]
+  ]
+}
