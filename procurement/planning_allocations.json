@@ -1,0 +1,274 @@
+{
+  "status": "UNVERIFIED HYPOTHETICAL BUDGET; NOT QUOTED PRICES",
+  "items": [
+    {
+      "section": "1 Electronics",
+      "item": "Uno R3 compatible ATmega328P, 5V, 16MHz",
+      "quantity": 1,
+      "unit_allocation_inr": 600,
+      "notes": "Check USB interface/cable; original Arduino costs more."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "A4988 carrier with heatsink",
+      "quantity": 1,
+      "unit_allocation_inr": 200,
+      "notes": "Require documented pinout and sense-resistor value."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "17HS4401 NEMA17 bipolar, 1.8 degree, 4 wire",
+      "quantity": 1,
+      "unit_allocation_inr": 800,
+      "notes": "Verify actual motor datasheet, shaft and phase current; start driver at 0.60 A."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "Logitech C270 HD USB webcam 720p",
+      "quantity": 1,
+      "unit_allocation_inr": 2000,
+      "notes": "Confirm manual exposure and white-balance control in intended software before buying; qualitative imaging."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "Isolated regulated 12V DC 3A enclosed adapter",
+      "quantity": 1,
+      "unit_allocation_inr": 650,
+      "notes": "Check connector, centre polarity, certification and included cable."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "FQP30N06L logic-level N-MOSFET TO-220",
+      "quantity": 2,
+      "unit_allocation_inr": 80,
+      "notes": "Specific genuine part; one installed and one spare."
+    },
+    {
+      "section": "1 Electronics",
+      "item": "Omron SS-5GL SPDT lever microswitch",
+      "quantity": 2,
+      "unit_allocation_inr": 150,
+      "notes": "COM/NC/NO; one installed and one spare; compare mounting dimensions."
+    },
+    {
+      "section": "2 Optics",
+      "item": "Visible linear polarizing film 150 x 150 mm non-adhesive",
+      "quantity": 2,
+      "unit_allocation_inr": 750,
+      "notes": "Not CPL/circular, not decorative tinted film; request transmission/extinction information."
+    },
+    {
+      "section": "2 Optics",
+      "item": "12V white LED backlight panel >=100 x 50 mm, <=0.5A",
+      "quantity": 1,
+      "unit_allocation_inr": 600,
+      "notes": "Must include current limiting or compatible driver; confirm usable illuminated area."
+    },
+    {
+      "section": "2 Optics",
+      "item": "Opal acrylic diffuser approximately 150 x 100 x 1-2 mm",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "Optional if backlight already diffused; placed before input polarizer."
+    },
+    {
+      "section": "2 Optics",
+      "item": "Fixed polarizing-film holder",
+      "quantity": 1,
+      "unit_allocation_inr": 250,
+      "notes": "Fabricated frame acceptable; film flat and aperture clear."
+    },
+    {
+      "section": "2 Optics",
+      "item": "Adjustable webcam mount compatible with C270",
+      "quantity": 1,
+      "unit_allocation_inr": 300,
+      "notes": "Do not assume a standard tripod socket on webcam."
+    },
+    {
+      "section": "2 Optics",
+      "item": "Matte black enclosure panels / foam board",
+      "quantity": 1,
+      "unit_allocation_inr": 250,
+      "notes": "One material allowance; dimensions after optical layout."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "GT2 20T pulley 2mm pitch, 5mm bore, 6mm belt width",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "Confirm motor shaft; include grub screws."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "CUSTOM GT2 80T annular analyzer pulley / holder",
+      "quantity": 1,
+      "unit_allocation_inr": 1500,
+      "notes": "FABRICATION QUOTE REQUIRED. Must have central optical opening, not a normal solid pulley. Holder included here once."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "GT2 closed-loop belt 2mm pitch 6mm wide",
+      "quantity": 1,
+      "unit_allocation_inr": 200,
+      "notes": "Length NOT finalized; choose after shaft centre distance is fixed."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "Analyzer bearing / roller support assembly",
+      "quantity": 1,
+      "unit_allocation_inr": 700,
+      "notes": "FABRICATION QUOTE REQUIRED. Bearing size depends on approved ring drawing."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "NEMA17 L mounting bracket",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "Match motor pattern; verify screw lengths."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "Rigid base plate approximately 300 x 200 mm",
+      "quantity": 1,
+      "unit_allocation_inr": 400,
+      "notes": "Fabrication/material allowance; final dimensions after layout."
+    },
+    {
+      "section": "3 Mechanics",
+      "item": "M3/M4 screws nuts washers spacers assortment",
+      "quantity": 1,
+      "unit_allocation_inr": 200,
+      "notes": "One assortment; match mounts and avoid screws bottoming in motor."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "10 kohm 1/4W 1% metal-film resistor",
+      "quantity": 10,
+      "unit_allocation_inr": 2,
+      "notes": "Four required, extras are spares; sellers may impose pack quantities."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "4.7 kohm 1/4W 1% metal-film resistor",
+      "quantity": 5,
+      "unit_allocation_inr": 2,
+      "notes": "One required; pack pricing varies."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "100 ohm 1/4W 1% metal-film resistor",
+      "quantity": 5,
+      "unit_allocation_inr": 2,
+      "notes": "One required; pack pricing varies."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "100uF 35V radial electrolytic capacitor 105C",
+      "quantity": 2,
+      "unit_allocation_inr": 20,
+      "notes": "One installed; observe polarity; mount near VMOT."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "100nF 50V X7R ceramic capacitor",
+      "quantity": 5,
+      "unit_allocation_inr": 5,
+      "notes": "Two installed; choose leaded package or suitable adapter."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "SPST power switch rated >=3A at 12V DC",
+      "quantity": 1,
+      "unit_allocation_inr": 80,
+      "notes": "DC load rating must be documented."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "Inline fuse holder",
+      "quantity": 1,
+      "unit_allocation_inr": 60,
+      "notes": "Must match selected fuse size; suitable current/voltage rating."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "2A fuse with suitable DC voltage rating",
+      "quantity": 3,
+      "unit_allocation_inr": 15,
+      "notes": "Initial selection; confirm time characteristic during power testing."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "5.5 x 2.1mm female DC jack to screw terminal",
+      "quantity": 1,
+      "unit_allocation_inr": 50,
+      "notes": "Only if matching adapter connector and polarity."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "2-position screw terminal blocks >=3A",
+      "quantity": 5,
+      "unit_allocation_inr": 20,
+      "notes": "Five is an initial quantity; match conductor size."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "24-26 AWG signal hookup wire assortment",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "One assortment."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "20-22 AWG stranded power wire assortment",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "A few metres; current rating also depends on installation."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "Male-male and male-female jumper wire set",
+      "quantity": 1,
+      "unit_allocation_inr": 150,
+      "notes": "Signals only; secure power connections separately."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "Solderable perfboard",
+      "quantity": 2,
+      "unit_allocation_inr": 50,
+      "notes": "Avoid high-current supply distribution through flimsy connections."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "Heat-shrink tubing assortment",
+      "quantity": 1,
+      "unit_allocation_inr": 100,
+      "notes": "One assortment."
+    },
+    {
+      "section": "4 Wiring",
+      "item": "USB-A to USB-B Arduino cable",
+      "quantity": 1,
+      "unit_allocation_inr": 100,
+      "notes": "Omit if included with board; verify actual board socket."
+    },
+    {
+      "section": "5 Specimens",
+      "item": "Clear solid polycarbonate 5mm sheet, 200 x 40mm coupons",
+      "quantity": 1,
+      "unit_allocation_inr": 500,
+      "notes": "Material/cutting allowance for several plain coupons, not a quoted sheet price. Actual thickness must be measured."
+    },
+    {
+      "section": "5 Specimens",
+      "item": "Clear cast PMMA acrylic 5mm sheet, 200 x 40mm coupons",
+      "quantity": 1,
+      "unit_allocation_inr": 300,
+      "notes": "Optional comparison material; material/cutting allowance included in full total."
+    }
+  ],
+  "subtotal_inr": 13050,
+  "reserve_inr": 1957.5,
+  "planning_total_inr": 15007.5
+}
